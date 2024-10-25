@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import requests
-API_KEY = "c486ee707c6d4a259667df69b0ad6ba3"
+import API_KEY
 def get_articles(category="all", lang="ru", pageSize=100):
     response = requests.get(
         f"https://newsapi.org/v2/everything?q={category}&language={lang}&pageSize={pageSize}&apiKey={API_KEY}"
